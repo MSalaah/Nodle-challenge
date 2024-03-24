@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var viewmodel: MainViewModel?
     
     private let cellReuseId = "NfTCell"
+    private let alert = UIAlertController(title: nil, message: "", preferredStyle: .alert)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationItem.title = "My Wallet"
 
+        //TODO: inject dependcies using Resolver
         let assetstUseCase: AssetsUseCassDataSource = AssetsUseCase(repository: WalletRepository(networkService: WalletServiceProvider(), cache: CoreDataWalletQueriesStorage()))
         let walletUseCase: WalletUseCaseDataSource = WalletUseCase(repository: WalletRepository(networkService: WalletServiceProvider(), cache: CoreDataWalletQueriesStorage()))
         viewmodel = MainViewModel(assetsUseCase: assetstUseCase, walletUseCase: walletUseCase)
@@ -53,16 +55,33 @@ class ViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    @IBAction func showDetailsAction(_ sender: Any) {
+        viewmodel?.fetchWalletData()
+    }
+    
     private func updateLoading(_ loading: Bool) {
         if loading {
             print("Show Loading")
+            let activityIndicator = UIActivityIndicatorView(style: .large)
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            activityIndicator.isUserInteractionEnabled = false
+            activityIndicator.color = .blue
+            activityIndicator.startAnimating()
+                    
+            alert.view.addSubview(activityIndicator)
+            
+            NSLayoutConstraint.activate([
+                alert.view.heightAnchor.constraint(equalToConstant: 95),
+                alert.view.widthAnchor.constraint(equalToConstant: 95),
+                activityIndicator.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor),
+                activityIndicator.centerYAnchor.constraint(equalTo: alert.view.centerYAnchor)
+            ])
+            
+            present(alert, animated: true)
         } else {
             print("Hide Loading")
+            alert.dismiss(animated: true)
         }
-    }
-    
-    @IBAction func showDetailsAction(_ sender: Any) {
-        viewmodel?.fetchWalletData()
     }
 }
 

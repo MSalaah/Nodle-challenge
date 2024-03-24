@@ -16,7 +16,8 @@ extension Wallet {
     @NSManaged public var id: String
     @NSManaged public var title: String
     @NSManaged public var address: String?
-
+    @NSManaged public var balance: String?
+    @NSManaged public var balanceUnit: String?
 }
 
 extension Wallet: Identifiable {
