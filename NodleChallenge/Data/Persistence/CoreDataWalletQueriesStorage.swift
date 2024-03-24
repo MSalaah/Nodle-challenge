@@ -8,7 +8,7 @@
 import Foundation
 
 protocol WalletQueriesStorage {
-    func fetchList(filterRequest: String, completion: @escaping (([Wallet]) -> Void))
+    func fetchList(completion: @escaping (([Wallet]) -> Void))
     
     func addWalletData(item: WalletEntity)
     
@@ -16,7 +16,7 @@ protocol WalletQueriesStorage {
 }
 
 class CoreDataWalletQueriesStorage: WalletQueriesStorage {
-    func fetchList(filterRequest: String, completion: @escaping (([Wallet]) -> Void)) {
+    func fetchList(completion: @escaping (([Wallet]) -> Void)) {
         var subPredicates: [NSPredicate] = []
 
         CoreDataHelper.fetchList(type: Wallet.self, predicate: NSCompoundPredicate(andPredicateWithSubpredicates: subPredicates), sortDescriptors: nil, relationshipKeysToFetch: nil) { list in

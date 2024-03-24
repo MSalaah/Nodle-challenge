@@ -22,14 +22,13 @@ class WalletRepository: WalletRepositoryProtocol {
         networkService.fetchAllAssests(completion: { [weak self] result in
             switch result {
             case .success(let response):
-                print("Success")
-//                let list = response.list
-                let wallet = WalletEntity(id: "testID",title: "testTitle")
+                guard let item = response.data.items?[0] else { return }
+                let wallet = WalletEntity(id: item.walletId, title: item.walletName)
                 self?.cache.addWalletData(item: wallet)
                 completion(response)
             case .failure(_):
-                print("Error")
-//                self?.fetchLocalList(filterRequest: filterRequest, isEditable: nil, completion: completion)
+                print("Working offline")
+                self?.fetchFromLocal(completion: completion)
             }
         })
     }
@@ -43,9 +42,20 @@ class WalletRepository: WalletRepositoryProtocol {
 //                self?.cache.addList(items: list)
                 completion(response)
             case .failure(_):
-                print("Error")
+                print("Working offline")
 //                self?.fetchLocalList(filterRequest: filterRequest, isEditable: nil, completion: completion)
             }
         })
+    }
+    
+    private func fetchFromLocal(completion: @escaping (AssetsResponse) -> Void) {
+        var arr: [Assets] = []
+        cache.fetchList { list in
+            let itemsList = list.map { 
+                arr.append(Assets(walletId: $0.id, walletName: $0.title))
+            }
+            let resp = AssetsResponse(apiVersion: "Local", requestId: "LocalReq", data: AssetsData(total: itemsList.count, items: arr))
+            completion(resp)
+        }
     }
 }

@@ -40,6 +40,7 @@
 		FAA074082BAC6BED0070E26E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074052BAC6BED0070E26E /* TargetType.swift */; };
 		FAA0740A2BAC6BED0070E26E /* BaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */; };
 		FAB185CD2BB06B7F00E17C9C /* NfTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB185CC2BB06B7F00E17C9C /* NfTCell.swift */; };
+		FAB185E12BB0AFDE00E17C9C /* NodleEntities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAB185DF2BB0AFDE00E17C9C /* NodleEntities.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		FAA074052BAC6BED0070E26E /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServiceProvider.swift; sourceTree = "<group>"; };
 		FAB185CC2BB06B7F00E17C9C /* NfTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfTCell.swift; sourceTree = "<group>"; };
+		FAB185E02BB0AFDE00E17C9C /* NodleEntities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NodleEntities.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				FA7B99092BAC365C0022E7F7 /* LaunchScreen.storyboard */,
 				FA7B990C2BAC365C0022E7F7 /* Info.plist */,
 				FA3A221A2BB010C600A39AA6 /* Observable.swift */,
+				FAB185DF2BB0AFDE00E17C9C /* NodleEntities.xcdatamodeld */,
 			);
 			path = NodleChallenge;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				FAA073FF2BAC56260070E26E /* Wallet+CoreDataClass.swift in Sources */,
 				FAA073E12BAC4D810070E26E /* WalletRepository.swift in Sources */,
 				FA3A22172BAF10E900A39AA6 /* WalletResponse.swift in Sources */,
+				FAB185E12BB0AFDE00E17C9C /* NodleEntities.xcdatamodeld in Sources */,
 				FAA073DF2BAC4C7C0070E26E /* WalletApi.swift in Sources */,
 				FA3A221B2BB010C600A39AA6 /* Observable.swift in Sources */,
 				FAA073FD2BAC56260070E26E /* Wallet+CoreDataProperties.swift in Sources */,
@@ -911,6 +915,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAB185DF2BB0AFDE00E17C9C /* NodleEntities.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAB185E02BB0AFDE00E17C9C /* NodleEntities.xcdatamodel */,
+			);
+			currentVersion = FAB185E02BB0AFDE00E17C9C /* NodleEntities.xcdatamodel */;
+			path = NodleEntities.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA7B98F32BAC365A0022E7F7 /* Project object */;
 }

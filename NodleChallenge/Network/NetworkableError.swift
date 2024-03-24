@@ -12,11 +12,3 @@ enum NetworkableError: Error {
     case server(description: String, code: Int)
     case unauthorized
 }
-
-struct ListResponse<T: Codable>: Codable {
-    var isEditable: Bool? = true
-    var totalPageCount: Int
-    var page: Int
-    var list: [T]
-    var allItemsCountWithSearchParams: Int? = 0
-}
