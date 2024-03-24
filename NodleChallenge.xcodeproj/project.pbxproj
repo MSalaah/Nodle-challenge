@@ -39,6 +39,7 @@
 		FAA074032BAC59EB0070E26E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074022BAC59EB0070E26E /* CoreDataHelper.swift */; };
 		FAA074082BAC6BED0070E26E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074052BAC6BED0070E26E /* TargetType.swift */; };
 		FAA0740A2BAC6BED0070E26E /* BaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */; };
+		FAB185CD2BB06B7F00E17C9C /* NfTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB185CC2BB06B7F00E17C9C /* NfTCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		FAA074022BAC59EB0070E26E /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		FAA074052BAC6BED0070E26E /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServiceProvider.swift; sourceTree = "<group>"; };
+		FAB185CC2BB06B7F00E17C9C /* NfTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfTCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			children = (
 				FA7B99022BAC365A0022E7F7 /* ViewController.swift */,
 				FAA073ED2BAC53F20070E26E /* MainViewModel.swift */,
+				FAB185CC2BB06B7F00E17C9C /* NfTCell.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				FAA074032BAC59EB0070E26E /* CoreDataHelper.swift in Sources */,
 				FAA073E32BAC51520070E26E /* WalletServiceProvider.swift in Sources */,
 				FA7B99032BAC365A0022E7F7 /* ViewController.swift in Sources */,
+				FAB185CD2BB06B7F00E17C9C /* NfTCell.swift in Sources */,
 				FAA074082BAC6BED0070E26E /* TargetType.swift in Sources */,
 				FAA073EE2BAC53F20070E26E /* MainViewModel.swift in Sources */,
 				FA7B98FF2BAC365A0022E7F7 /* AppDelegate.swift in Sources */,

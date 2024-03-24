@@ -7,35 +7,22 @@
 
 import Foundation
 
-
-protocol MainViewModelOutput {
-    var loading: Observable<Bool> { get }
-    var query: Observable<String> { get }
-    var error: Observable<String> { get }
-    var screenTitle: String { get }
-    var emptyDataTitle: Observable<String> { get }
-    var errorTitle: String { get }
-    var searchBarPlaceholder: String { get }
-}
-
 final class MainViewModel {
     
     // MARK: - OUTPUT
-    let loading: Observable<Bool> = Observable(false)
-    let query: Observable<String> = Observable("")
-    let error: Observable<String> = Observable("")
-    let screenTitle = NSLocalizedString("Wallet", comment: "")
-    let emptyDataTitle : Observable<String> = Observable("")
-    let errorTitle = NSLocalizedString("Error", comment: "")
+    var loading: Observable<Bool> = Observable(false)
     
+    var details: Observable<[WalletDetails]> = Observable([])
     
-    var onShowSpinner: (() -> Void)?
-    var onHideSpinner: (() -> Void)?
+    var error: Observable<String> = Observable("")
+        
     var onAssetsFetched: ((String, String) -> (Void))?
     
+    var walletDetails: ((WalletEntity) -> (Void))?
+    var detailsArray:[WalletDetails] = []
+
     
     private var walletId: String?
-    
     private let walletUseCase: WalletUseCaseDataSource
     private let assetsUseCase: AssetsUseCassDataSource
     
@@ -57,9 +44,33 @@ final class MainViewModel {
     
      func fetchWalletData() {
         guard let id = self.walletId else { return }
+        self.loading.value = true
         walletUseCase.fetchWallet(walletId: id) { [weak self] walletResp in
             guard let item = walletResp.data.items?[0] else { return }
             let address = item.address
+            let date = Date(timeIntervalSince1970: TimeInterval(item.createdTimestamp))
+            let balanceAmount = item.confirmedBalance.amount
+            let balanceUnit = item.confirmedBalance.unit
+            
+//            var wallet = WalletEntity(id: id, title: "test title")
+//            wallet.address = address
+//            wallet.balanceAmout = balanceAmount
+//            wallet.balanceUnit = balanceUnit
+//            wallet.createdTimeStamp = item.createdTimestamp
+                        
+            self?.detailsArray.append(WalletDetails(title: "Wallet address", value: address))
+            self?.detailsArray.append(WalletDetails(title: "Wallet balance", value: balanceAmount))
+            self?.detailsArray.append(WalletDetails(title: "Wallet balance Unit", value: balanceUnit))
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .short
+            let formattedDate = dateFormatter.string(from: date)
+
+            self?.detailsArray.append(WalletDetails(title: "Creatoion Date", value: formattedDate))
+            
+            self?.details.value = self?.detailsArray ?? []
+            self?.loading.value = false
         }
     }
 }

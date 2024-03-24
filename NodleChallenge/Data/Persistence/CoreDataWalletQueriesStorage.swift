@@ -49,8 +49,7 @@ class CoreDataWalletQueriesStorage: WalletQueriesStorage {
             if !fetchedItems.isEmpty {
                 let updatedItem = fetchedItems.first
                 updatedItem?.title = item.title
-                updatedItem?.icon = item.icon
-                updatedItem?.isCompleted = item.isCompleted
+                updatedItem?.address = item.address
                 PersistenceCoreDataHelper.saveContext()
             }
         }

@@ -16,6 +16,6 @@ public class Wallet: NSManagedObject {
     }
     
     func toNetworkObject() -> WalletEntity {
-        return WalletEntity(id: "test", title: "test")
+        return WalletEntity(id: self.id, title: self.title)
     }
 }

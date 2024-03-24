@@ -36,10 +36,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-bi-XXV">
-                                <rect key="frame" x="0.0" y="417" width="393" height="435"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-bi-XXV">
+                                <rect key="frame" x="0.0" y="346" width="402" height="506"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NfTCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NfTCell" id="YDs-ze-Qfy" customClass="NfTCell" customModule="NodleChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="402" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YDs-ze-Qfy" id="X2l-gp-HzN">
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="token Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X9-bM-G5n">
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="92" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-8l-YY5">
+                                                    <rect key="frame" x="327" y="12" width="43" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XT6-8l-YY5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1X9-bM-G5n" secondAttribute="trailing" symbolic="YES" id="0Lj-rn-Th5"/>
+                                                <constraint firstItem="1X9-bM-G5n" firstAttribute="width" secondItem="XT6-8l-YY5" secondAttribute="height" multiplier="23:5" id="7bS-8a-FZ5"/>
+                                                <constraint firstItem="1X9-bM-G5n" firstAttribute="leading" secondItem="X2l-gp-HzN" secondAttribute="leading" constant="20" symbolic="YES" id="dfU-hS-Upb"/>
+                                                <constraint firstItem="1X9-bM-G5n" firstAttribute="centerY" secondItem="X2l-gp-HzN" secondAttribute="centerY" id="fDb-qW-BdD"/>
+                                                <constraint firstAttribute="trailing" secondItem="XT6-8l-YY5" secondAttribute="trailing" constant="32" id="tB6-lY-Swq"/>
+                                                <constraint firstItem="XT6-8l-YY5" firstAttribute="centerY" secondItem="X2l-gp-HzN" secondAttribute="centerY" id="wOo-iq-XBD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="NfTCell"/>
+                                        <connections>
+                                            <outlet property="name" destination="1X9-bM-G5n" id="FX0-WU-Y7F"/>
+                                            <outlet property="value" destination="XT6-8l-YY5" id="SES-23-sWJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,10 +84,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lwl-jY-Fnk" secondAttribute="trailing" constant="110" id="0J7-eg-C1x"/>
                             <constraint firstItem="kNB-VK-rmZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-7.5" id="46l-wQ-ND2"/>
                             <constraint firstItem="uya-xU-mVg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Byg-xI-UaA"/>
+                            <constraint firstItem="cVb-bi-XXV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="4.5" id="Ey9-6Y-2OF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lwl-jY-Fnk" secondAttribute="bottom" constant="529" id="PHT-cA-hID"/>
+                            <constraint firstItem="cVb-bi-XXV" firstAttribute="top" secondItem="Lwl-jY-Fnk" secondAttribute="bottom" constant="57" id="QVX-In-AVu"/>
                             <constraint firstItem="Lwl-jY-Fnk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="UnB-4j-vva"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cVb-bi-XXV" secondAttribute="bottom" constant="-34" id="WSy-Tr-H6r"/>
                             <constraint firstItem="uya-xU-mVg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Yun-fH-UHA"/>
                             <constraint firstItem="kNB-VK-rmZ" firstAttribute="top" secondItem="uya-xU-mVg" secondAttribute="bottom" constant="39" id="cbx-j5-lnK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cVb-bi-XXV" secondAttribute="trailing" constant="-9" id="g7V-ON-HCt"/>
+                            <constraint firstItem="cVb-bi-XXV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="szr-Dz-YdL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MbV-cO-6Ed"/>

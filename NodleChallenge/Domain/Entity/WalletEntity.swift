@@ -10,12 +10,11 @@ import Foundation
 struct WalletEntity: Codable {
     var id: String
     var title: String
-    var imageUrl: String = ""
-    var icon: String = ""
-    var startTime: String = ""
-    var endTime: String = ""
-    var completedAt: String = ""
-    var isCompleted: Bool = false
+    var address: String = ""
+    var balanceAmout: String = ""
+    var balanceUnit: String = ""
+    var nonFungibleTokens: [NFTokenEntity] = []
+    var createdTimeStamp: Int64  = 0
 }
 
 extension WalletEntity {
@@ -23,9 +22,11 @@ extension WalletEntity {
         let item = Wallet()
         item.id = self.id
         item.title = self.title
-        item.imageUrl = self.imageUrl
-        item.icon = self.icon
-        item.isCompleted = self.isCompleted
         return item
     }
+}
+
+struct WalletDetails {
+    var title: String
+    var value: String
 }

@@ -21,6 +21,7 @@ struct WalletAddress: Codable {
     var address: String
     var confirmedBalance: Balance
     var createdTimestamp: Int64
+    var nonFungibleTokens: [NFTokenEntity]
 }
 
 
