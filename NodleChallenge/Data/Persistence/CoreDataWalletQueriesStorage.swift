@@ -10,7 +10,7 @@ import Foundation
 protocol WalletQueriesStorage {
     func fetchList(filterRequest: String, completion: @escaping (([Wallet]) -> Void))
     
-    func addList(items: [WalletEntity])
+    func addWalletData(item: WalletEntity)
     
     func updateItem(item: WalletEntity)
 }
@@ -24,18 +24,14 @@ class CoreDataWalletQueriesStorage: WalletQueriesStorage {
         }
     }
     
-    func addList(items: [WalletEntity]) {
-        if !items.isEmpty {
-            for index in 0..<items.count {
-                let predicate = NSPredicate(format: "id = %@", argumentArray: [items[index].id])
-                CoreDataHelper.isItemExist(type: Wallet.self, predicate: predicate) { isExist in
-                    if !isExist {
-                        _ = items[index].toManagedObject()
-                        PersistenceCoreDataHelper.saveContext()
-                    } else {
-                        self.updateItem(item: items[index])
-                    }
-                }
+    func addWalletData(item: WalletEntity) {
+        let predicate = NSPredicate(format: "id = %@", argumentArray: [item.id])
+        CoreDataHelper.isItemExist(type: Wallet.self, predicate: predicate) { isExist in
+            if !isExist {
+                _ = item.toManagedObject()
+                PersistenceCoreDataHelper.saveContext()
+            } else {
+                self.updateItem(item: item)
             }
         }
     }

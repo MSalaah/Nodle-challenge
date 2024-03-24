@@ -24,7 +24,8 @@ class WalletRepository: WalletRepositoryProtocol {
             case .success(let response):
                 print("Success")
 //                let list = response.list
-//                self?.cache.addList(items: list)
+                let wallet = WalletEntity(id: "testID",title: "testTitle")
+                self?.cache.addWalletData(item: wallet)
                 completion(response)
             case .failure(_):
                 print("Error")
