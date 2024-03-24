@@ -1,0 +1,912 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03E96DF9FD5404C272E24956 /* Pods_NodleChallenge_NodleChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4262172FCAB3C749A4D70A6 /* Pods_NodleChallenge_NodleChallengeUITests.framework */; };
+		4A946AC0B029431EC664F11B /* Pods_NodleChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7896DEF61216DD31E3E5ECD /* Pods_NodleChallenge.framework */; };
+		ED76224B6E1ED4F8402CBA82 /* Pods_NodleChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C016FEBAE13D0B6D5F1139 /* Pods_NodleChallengeTests.framework */; };
+		FA3A22142BADA89C00A39AA6 /* NetworkableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A22132BADA89C00A39AA6 /* NetworkableError.swift */; };
+		FA3A22172BAF10E900A39AA6 /* WalletResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A22162BAF10E900A39AA6 /* WalletResponse.swift */; };
+		FA3A22192BAF164300A39AA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A22182BAF164300A39AA6 /* Constants.swift */; };
+		FA3A221B2BB010C600A39AA6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A221A2BB010C600A39AA6 /* Observable.swift */; };
+		FA7B98FF2BAC365A0022E7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B98FE2BAC365A0022E7F7 /* AppDelegate.swift */; };
+		FA7B99012BAC365A0022E7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B99002BAC365A0022E7F7 /* SceneDelegate.swift */; };
+		FA7B99032BAC365A0022E7F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B99022BAC365A0022E7F7 /* ViewController.swift */; };
+		FA7B99062BAC365A0022E7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7B99042BAC365A0022E7F7 /* Main.storyboard */; };
+		FA7B99082BAC365C0022E7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7B99072BAC365C0022E7F7 /* Assets.xcassets */; };
+		FA7B990B2BAC365C0022E7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7B99092BAC365C0022E7F7 /* LaunchScreen.storyboard */; };
+		FA7B99162BAC365C0022E7F7 /* NodleChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B99152BAC365C0022E7F7 /* NodleChallengeTests.swift */; };
+		FA7B99202BAC365C0022E7F7 /* NodleChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B991F2BAC365C0022E7F7 /* NodleChallengeUITests.swift */; };
+		FA7B99222BAC365C0022E7F7 /* NodleChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B99212BAC365C0022E7F7 /* NodleChallengeUITestsLaunchTests.swift */; };
+		FAA073DD2BAC4A950070E26E /* WalletRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073DC2BAC4A950070E26E /* WalletRepositoryProtocol.swift */; };
+		FAA073DF2BAC4C7C0070E26E /* WalletApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073DE2BAC4C7C0070E26E /* WalletApi.swift */; };
+		FAA073E12BAC4D810070E26E /* WalletRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073E02BAC4D810070E26E /* WalletRepository.swift */; };
+		FAA073E32BAC51520070E26E /* WalletServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073E22BAC51520070E26E /* WalletServiceProvider.swift */; };
+		FAA073E52BAC51EB0070E26E /* WalletUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073E42BAC51EB0070E26E /* WalletUseCase.swift */; };
+		FAA073E72BAC51FD0070E26E /* AssestsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073E62BAC51FD0070E26E /* AssestsUseCase.swift */; };
+		FAA073EE2BAC53F20070E26E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073ED2BAC53F20070E26E /* MainViewModel.swift */; };
+		FAA073F02BAC54160070E26E /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073EF2BAC54160070E26E /* WalletEntity.swift */; };
+		FAA073F22BAC542E0070E26E /* NFTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073F12BAC542E0070E26E /* NFTokenEntity.swift */; };
+		FAA073FD2BAC56260070E26E /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073FA2BAC56250070E26E /* Wallet+CoreDataProperties.swift */; };
+		FAA073FE2BAC56260070E26E /* CoreDataWalletQueriesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073FB2BAC56260070E26E /* CoreDataWalletQueriesStorage.swift */; };
+		FAA073FF2BAC56260070E26E /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA073FC2BAC56260070E26E /* Wallet+CoreDataClass.swift */; };
+		FAA074012BAC56580070E26E /* PersistenceCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074002BAC56580070E26E /* PersistenceCoreDataHelper.swift */; };
+		FAA074032BAC59EB0070E26E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074022BAC59EB0070E26E /* CoreDataHelper.swift */; };
+		FAA074082BAC6BED0070E26E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074052BAC6BED0070E26E /* TargetType.swift */; };
+		FAA0740A2BAC6BED0070E26E /* BaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA7B99122BAC365C0022E7F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7B98F32BAC365A0022E7F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA7B98FA2BAC365A0022E7F7;
+			remoteInfo = NodleChallenge;
+		};
+		FA7B991C2BAC365C0022E7F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7B98F32BAC365A0022E7F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA7B98FA2BAC365A0022E7F7;
+			remoteInfo = NodleChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2ABCDF49ECAF74884C9086E0 /* Pods-NodleChallenge-NodleChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodleChallenge-NodleChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-NodleChallenge-NodleChallengeUITests/Pods-NodleChallenge-NodleChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		31D489CFB79254446848BB26 /* Pods-NodleChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodleChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-NodleChallengeTests/Pods-NodleChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		43A4EED8F134026877A05E85 /* Pods-NodleChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodleChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-NodleChallengeTests/Pods-NodleChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		48FC57AEF2B92A687002D5A1 /* Pods-NodleChallenge-NodleChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodleChallenge-NodleChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-NodleChallenge-NodleChallengeUITests/Pods-NodleChallenge-NodleChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		72D7742E7116CABA1B1E7452 /* Pods-NodleChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodleChallenge.debug.xcconfig"; path = "Target Support Files/Pods-NodleChallenge/Pods-NodleChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		816F493FCC66CA56D206DEC9 /* Pods-NodleChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodleChallenge.release.xcconfig"; path = "Target Support Files/Pods-NodleChallenge/Pods-NodleChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		A3C016FEBAE13D0B6D5F1139 /* Pods_NodleChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NodleChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4262172FCAB3C749A4D70A6 /* Pods_NodleChallenge_NodleChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NodleChallenge_NodleChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7896DEF61216DD31E3E5ECD /* Pods_NodleChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NodleChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3A22132BADA89C00A39AA6 /* NetworkableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkableError.swift; sourceTree = "<group>"; };
+		FA3A22162BAF10E900A39AA6 /* WalletResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletResponse.swift; sourceTree = "<group>"; };
+		FA3A22182BAF164300A39AA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA3A221A2BB010C600A39AA6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FA7B98FB2BAC365A0022E7F7 /* NodleChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NodleChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7B98FE2BAC365A0022E7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA7B99002BAC365A0022E7F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA7B99022BAC365A0022E7F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA7B99052BAC365A0022E7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA7B99072BAC365C0022E7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA7B990A2BAC365C0022E7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA7B990C2BAC365C0022E7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7B99112BAC365C0022E7F7 /* NodleChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NodleChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7B99152BAC365C0022E7F7 /* NodleChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodleChallengeTests.swift; sourceTree = "<group>"; };
+		FA7B991B2BAC365C0022E7F7 /* NodleChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NodleChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7B991F2BAC365C0022E7F7 /* NodleChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodleChallengeUITests.swift; sourceTree = "<group>"; };
+		FA7B99212BAC365C0022E7F7 /* NodleChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodleChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAA073DC2BAC4A950070E26E /* WalletRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FAA073DE2BAC4C7C0070E26E /* WalletApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApi.swift; sourceTree = "<group>"; };
+		FAA073E02BAC4D810070E26E /* WalletRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRepository.swift; sourceTree = "<group>"; };
+		FAA073E22BAC51520070E26E /* WalletServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServiceProvider.swift; sourceTree = "<group>"; };
+		FAA073E42BAC51EB0070E26E /* WalletUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUseCase.swift; sourceTree = "<group>"; };
+		FAA073E62BAC51FD0070E26E /* AssestsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssestsUseCase.swift; sourceTree = "<group>"; };
+		FAA073ED2BAC53F20070E26E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FAA073EF2BAC54160070E26E /* WalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEntity.swift; sourceTree = "<group>"; };
+		FAA073F12BAC542E0070E26E /* NFTokenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTokenEntity.swift; sourceTree = "<group>"; };
+		FAA073FA2BAC56250070E26E /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAA073FB2BAC56260070E26E /* CoreDataWalletQueriesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataWalletQueriesStorage.swift; sourceTree = "<group>"; };
+		FAA073FC2BAC56260070E26E /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAA074002BAC56580070E26E /* PersistenceCoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceCoreDataHelper.swift; sourceTree = "<group>"; };
+		FAA074022BAC59EB0070E26E /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		FAA074052BAC6BED0070E26E /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServiceProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA7B98F82BAC365A0022E7F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A946AC0B029431EC664F11B /* Pods_NodleChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7B990E2BAC365C0022E7F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED76224B6E1ED4F8402CBA82 /* Pods_NodleChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7B99182BAC365C0022E7F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E96DF9FD5404C272E24956 /* Pods_NodleChallenge_NodleChallengeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06EB32B714EAE4AE0221B937 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72D7742E7116CABA1B1E7452 /* Pods-NodleChallenge.debug.xcconfig */,
+				816F493FCC66CA56D206DEC9 /* Pods-NodleChallenge.release.xcconfig */,
+				2ABCDF49ECAF74884C9086E0 /* Pods-NodleChallenge-NodleChallengeUITests.debug.xcconfig */,
+				48FC57AEF2B92A687002D5A1 /* Pods-NodleChallenge-NodleChallengeUITests.release.xcconfig */,
+				31D489CFB79254446848BB26 /* Pods-NodleChallengeTests.debug.xcconfig */,
+				43A4EED8F134026877A05E85 /* Pods-NodleChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EADBAD552B275CFEE7F5DC0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7896DEF61216DD31E3E5ECD /* Pods_NodleChallenge.framework */,
+				B4262172FCAB3C749A4D70A6 /* Pods_NodleChallenge_NodleChallengeUITests.framework */,
+				A3C016FEBAE13D0B6D5F1139 /* Pods_NodleChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA3A22152BADA8D000A39AA6 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FAA074022BAC59EB0070E26E /* CoreDataHelper.swift */,
+				FAA074002BAC56580070E26E /* PersistenceCoreDataHelper.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FA7B98F22BAC365A0022E7F7 = {
+			isa = PBXGroup;
+			children = (
+				FA7B98FD2BAC365A0022E7F7 /* NodleChallenge */,
+				FA7B99142BAC365C0022E7F7 /* NodleChallengeTests */,
+				FA7B991E2BAC365C0022E7F7 /* NodleChallengeUITests */,
+				FA7B98FC2BAC365A0022E7F7 /* Products */,
+				06EB32B714EAE4AE0221B937 /* Pods */,
+				EADBAD552B275CFEE7F5DC0A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA7B98FC2BAC365A0022E7F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA7B98FB2BAC365A0022E7F7 /* NodleChallenge.app */,
+				FA7B99112BAC365C0022E7F7 /* NodleChallengeTests.xctest */,
+				FA7B991B2BAC365C0022E7F7 /* NodleChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA7B98FD2BAC365A0022E7F7 /* NodleChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A22152BADA8D000A39AA6 /* Persistence */,
+				FAA074042BAC6BCF0070E26E /* Network */,
+				FAA073D72BAC49430070E26E /* Data */,
+				FAA073D82BAC49490070E26E /* Domain */,
+				FAA073D92BAC494F0070E26E /* Presentation */,
+				FA7B98FE2BAC365A0022E7F7 /* AppDelegate.swift */,
+				FA7B99002BAC365A0022E7F7 /* SceneDelegate.swift */,
+				FA7B99042BAC365A0022E7F7 /* Main.storyboard */,
+				FA7B99072BAC365C0022E7F7 /* Assets.xcassets */,
+				FA7B99092BAC365C0022E7F7 /* LaunchScreen.storyboard */,
+				FA7B990C2BAC365C0022E7F7 /* Info.plist */,
+				FA3A221A2BB010C600A39AA6 /* Observable.swift */,
+			);
+			path = NodleChallenge;
+			sourceTree = "<group>";
+		};
+		FA7B99142BAC365C0022E7F7 /* NodleChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA7B99152BAC365C0022E7F7 /* NodleChallengeTests.swift */,
+			);
+			path = NodleChallengeTests;
+			sourceTree = "<group>";
+		};
+		FA7B991E2BAC365C0022E7F7 /* NodleChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA7B991F2BAC365C0022E7F7 /* NodleChallengeUITests.swift */,
+				FA7B99212BAC365C0022E7F7 /* NodleChallengeUITestsLaunchTests.swift */,
+			);
+			path = NodleChallengeUITests;
+			sourceTree = "<group>";
+		};
+		FAA073D72BAC49430070E26E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FAA073F32BAC557D0070E26E /* Persistence */,
+				FAA073DE2BAC4C7C0070E26E /* WalletApi.swift */,
+				FAA073E22BAC51520070E26E /* WalletServiceProvider.swift */,
+				FAA073E02BAC4D810070E26E /* WalletRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FAA073D82BAC49490070E26E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FAA073EA2BAC53230070E26E /* UseCase */,
+				FAA073EB2BAC536E0070E26E /* Entity */,
+				FAA073EC2BAC53C40070E26E /* RepoInterface */,
+				FA3A22162BAF10E900A39AA6 /* WalletResponse.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FAA073D92BAC494F0070E26E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FA7B99022BAC365A0022E7F7 /* ViewController.swift */,
+				FAA073ED2BAC53F20070E26E /* MainViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FAA073EA2BAC53230070E26E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FAA073E62BAC51FD0070E26E /* AssestsUseCase.swift */,
+				FAA073E42BAC51EB0070E26E /* WalletUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FAA073EB2BAC536E0070E26E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FAA073EF2BAC54160070E26E /* WalletEntity.swift */,
+				FAA073F12BAC542E0070E26E /* NFTokenEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAA073EC2BAC53C40070E26E /* RepoInterface */ = {
+			isa = PBXGroup;
+			children = (
+				FAA073DC2BAC4A950070E26E /* WalletRepositoryProtocol.swift */,
+			);
+			path = RepoInterface;
+			sourceTree = "<group>";
+		};
+		FAA073F32BAC557D0070E26E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FAA073FC2BAC56260070E26E /* Wallet+CoreDataClass.swift */,
+				FAA073FA2BAC56250070E26E /* Wallet+CoreDataProperties.swift */,
+				FAA073FB2BAC56260070E26E /* CoreDataWalletQueriesStorage.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FAA074042BAC6BCF0070E26E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FAA074072BAC6BED0070E26E /* BaseServiceProvider.swift */,
+				FAA074052BAC6BED0070E26E /* TargetType.swift */,
+				FA3A22132BADA89C00A39AA6 /* NetworkableError.swift */,
+				FA3A22182BAF164300A39AA6 /* Constants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA7B98FA2BAC365A0022E7F7 /* NodleChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7B99252BAC365C0022E7F7 /* Build configuration list for PBXNativeTarget "NodleChallenge" */;
+			buildPhases = (
+				076DDF8B9E566BD045769C02 /* [CP] Check Pods Manifest.lock */,
+				FA7B98F72BAC365A0022E7F7 /* Sources */,
+				FA7B98F82BAC365A0022E7F7 /* Frameworks */,
+				FA7B98F92BAC365A0022E7F7 /* Resources */,
+				A7B54D26B8EF092D491E58DF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NodleChallenge;
+			productName = NodleChallenge;
+			productReference = FA7B98FB2BAC365A0022E7F7 /* NodleChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA7B99102BAC365C0022E7F7 /* NodleChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7B99282BAC365C0022E7F7 /* Build configuration list for PBXNativeTarget "NodleChallengeTests" */;
+			buildPhases = (
+				138C5D2344F50065FCDA37CE /* [CP] Check Pods Manifest.lock */,
+				FA7B990D2BAC365C0022E7F7 /* Sources */,
+				FA7B990E2BAC365C0022E7F7 /* Frameworks */,
+				FA7B990F2BAC365C0022E7F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA7B99132BAC365C0022E7F7 /* PBXTargetDependency */,
+			);
+			name = NodleChallengeTests;
+			productName = NodleChallengeTests;
+			productReference = FA7B99112BAC365C0022E7F7 /* NodleChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA7B991A2BAC365C0022E7F7 /* NodleChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7B992B2BAC365C0022E7F7 /* Build configuration list for PBXNativeTarget "NodleChallengeUITests" */;
+			buildPhases = (
+				CF9FDADD50254A7011C7E83B /* [CP] Check Pods Manifest.lock */,
+				FA7B99172BAC365C0022E7F7 /* Sources */,
+				FA7B99182BAC365C0022E7F7 /* Frameworks */,
+				FA7B99192BAC365C0022E7F7 /* Resources */,
+				EB6D412DE38349B593A5D6BB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA7B991D2BAC365C0022E7F7 /* PBXTargetDependency */,
+			);
+			name = NodleChallengeUITests;
+			productName = NodleChallengeUITests;
+			productReference = FA7B991B2BAC365C0022E7F7 /* NodleChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA7B98F32BAC365A0022E7F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					FA7B98FA2BAC365A0022E7F7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					FA7B99102BAC365C0022E7F7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = FA7B98FA2BAC365A0022E7F7;
+					};
+					FA7B991A2BAC365C0022E7F7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = FA7B98FA2BAC365A0022E7F7;
+					};
+				};
+			};
+			buildConfigurationList = FA7B98F62BAC365A0022E7F7 /* Build configuration list for PBXProject "NodleChallenge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA7B98F22BAC365A0022E7F7;
+			productRefGroup = FA7B98FC2BAC365A0022E7F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA7B98FA2BAC365A0022E7F7 /* NodleChallenge */,
+				FA7B99102BAC365C0022E7F7 /* NodleChallengeTests */,
+				FA7B991A2BAC365C0022E7F7 /* NodleChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA7B98F92BAC365A0022E7F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7B990B2BAC365C0022E7F7 /* LaunchScreen.storyboard in Resources */,
+				FA7B99082BAC365C0022E7F7 /* Assets.xcassets in Resources */,
+				FA7B99062BAC365A0022E7F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7B990F2BAC365C0022E7F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7B99192BAC365C0022E7F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		076DDF8B9E566BD045769C02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NodleChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		138C5D2344F50065FCDA37CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NodleChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B54D26B8EF092D491E58DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NodleChallenge/Pods-NodleChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NodleChallenge/Pods-NodleChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NodleChallenge/Pods-NodleChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF9FDADD50254A7011C7E83B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NodleChallenge-NodleChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB6D412DE38349B593A5D6BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NodleChallenge-NodleChallengeUITests/Pods-NodleChallenge-NodleChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NodleChallenge-NodleChallengeUITests/Pods-NodleChallenge-NodleChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NodleChallenge-NodleChallengeUITests/Pods-NodleChallenge-NodleChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA7B98F72BAC365A0022E7F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA073E52BAC51EB0070E26E /* WalletUseCase.swift in Sources */,
+				FA3A22192BAF164300A39AA6 /* Constants.swift in Sources */,
+				FAA073FF2BAC56260070E26E /* Wallet+CoreDataClass.swift in Sources */,
+				FAA073E12BAC4D810070E26E /* WalletRepository.swift in Sources */,
+				FA3A22172BAF10E900A39AA6 /* WalletResponse.swift in Sources */,
+				FAA073DF2BAC4C7C0070E26E /* WalletApi.swift in Sources */,
+				FA3A221B2BB010C600A39AA6 /* Observable.swift in Sources */,
+				FAA073FD2BAC56260070E26E /* Wallet+CoreDataProperties.swift in Sources */,
+				FAA074012BAC56580070E26E /* PersistenceCoreDataHelper.swift in Sources */,
+				FAA073FE2BAC56260070E26E /* CoreDataWalletQueriesStorage.swift in Sources */,
+				FAA073F22BAC542E0070E26E /* NFTokenEntity.swift in Sources */,
+				FAA073F02BAC54160070E26E /* WalletEntity.swift in Sources */,
+				FA3A22142BADA89C00A39AA6 /* NetworkableError.swift in Sources */,
+				FAA074032BAC59EB0070E26E /* CoreDataHelper.swift in Sources */,
+				FAA073E32BAC51520070E26E /* WalletServiceProvider.swift in Sources */,
+				FA7B99032BAC365A0022E7F7 /* ViewController.swift in Sources */,
+				FAA074082BAC6BED0070E26E /* TargetType.swift in Sources */,
+				FAA073EE2BAC53F20070E26E /* MainViewModel.swift in Sources */,
+				FA7B98FF2BAC365A0022E7F7 /* AppDelegate.swift in Sources */,
+				FAA073DD2BAC4A950070E26E /* WalletRepositoryProtocol.swift in Sources */,
+				FAA073E72BAC51FD0070E26E /* AssestsUseCase.swift in Sources */,
+				FA7B99012BAC365A0022E7F7 /* SceneDelegate.swift in Sources */,
+				FAA0740A2BAC6BED0070E26E /* BaseServiceProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7B990D2BAC365C0022E7F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7B99162BAC365C0022E7F7 /* NodleChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7B99172BAC365C0022E7F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7B99202BAC365C0022E7F7 /* NodleChallengeUITests.swift in Sources */,
+				FA7B99222BAC365C0022E7F7 /* NodleChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA7B99132BAC365C0022E7F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA7B98FA2BAC365A0022E7F7 /* NodleChallenge */;
+			targetProxy = FA7B99122BAC365C0022E7F7 /* PBXContainerItemProxy */;
+		};
+		FA7B991D2BAC365C0022E7F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA7B98FA2BAC365A0022E7F7 /* NodleChallenge */;
+			targetProxy = FA7B991C2BAC365C0022E7F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA7B99042BAC365A0022E7F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7B99052BAC365A0022E7F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA7B99092BAC365C0022E7F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7B990A2BAC365C0022E7F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA7B99232BAC365C0022E7F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA7B99242BAC365C0022E7F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA7B99262BAC365C0022E7F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72D7742E7116CABA1B1E7452 /* Pods-NodleChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NodleChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodle.NodleChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA7B99272BAC365C0022E7F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 816F493FCC66CA56D206DEC9 /* Pods-NodleChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NodleChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodle.NodleChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA7B99292BAC365C0022E7F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31D489CFB79254446848BB26 /* Pods-NodleChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodle.NodleChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NodleChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NodleChallenge";
+			};
+			name = Debug;
+		};
+		FA7B992A2BAC365C0022E7F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43A4EED8F134026877A05E85 /* Pods-NodleChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodle.NodleChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NodleChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NodleChallenge";
+			};
+			name = Release;
+		};
+		FA7B992C2BAC365C0022E7F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ABCDF49ECAF74884C9086E0 /* Pods-NodleChallenge-NodleChallengeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodle.NodleChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NodleChallenge;
+			};
+			name = Debug;
+		};
+		FA7B992D2BAC365C0022E7F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FC57AEF2B92A687002D5A1 /* Pods-NodleChallenge-NodleChallengeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodle.NodleChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NodleChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA7B98F62BAC365A0022E7F7 /* Build configuration list for PBXProject "NodleChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7B99232BAC365C0022E7F7 /* Debug */,
+				FA7B99242BAC365C0022E7F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA7B99252BAC365C0022E7F7 /* Build configuration list for PBXNativeTarget "NodleChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7B99262BAC365C0022E7F7 /* Debug */,
+				FA7B99272BAC365C0022E7F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA7B99282BAC365C0022E7F7 /* Build configuration list for PBXNativeTarget "NodleChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7B99292BAC365C0022E7F7 /* Debug */,
+				FA7B992A2BAC365C0022E7F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA7B992B2BAC365C0022E7F7 /* Build configuration list for PBXNativeTarget "NodleChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7B992C2BAC365C0022E7F7 /* Debug */,
+				FA7B992D2BAC365C0022E7F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA7B98F32BAC365A0022E7F7 /* Project object */;
+}
